@@ -1,0 +1,20 @@
+<RCC>
+  <qresource prefix="iconos">
+    <file>03-icono-empleados.svg</file>
+    <file>03-icono-empleados.png</file>
+    <file>1211729599.2.2.png</file>
+    <file>bag.2.2.png</file>
+    <file>Billing-icon.2.png</file>
+    <file>borrar.2.2.png</file>
+    <file>cash_register.2.2.png</file>
+    <file>ENCABEZADO.png</file>
+    <file>formulario_icon.2.2.png</file>
+    <file>Icono_datos.png</file>
+    <file>iconos.qrc</file>
+    <file>inventory_icon.2.jpg</file>
+    <file>nuevo-icono-de-grupo-de-usuario-14853.2.2.png</file>
+    <file>null.png</file>
+    <file>proveedores_icon.png</file>
+    <file>refresh_256.2.2.png</file>
+  </qresource>
+</RCC>

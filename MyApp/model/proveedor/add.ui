@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>540</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+     <layout class="QHBoxLayout" name="hlDialog">
+      <item>
+       <widget class="QLabel" name="lbNombres">
+        <property name="minimumSize">
+         <size>
+          <width>104</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="text">
+            <string>Nombres</string>
+        </property>
+        <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="leNombres">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+<item>
+     <layout class="QHBoxLayout" name="hlDialog">
+      <item>
+       <widget class="QLabel" name="lbApellido">
+        <property name="minimumSize">
+         <size>
+          <width>104</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="text">
+            <string>Apellido</string>
+        </property>
+        <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="leApellido">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+<item>
+     <layout class="QHBoxLayout" name="hlDialog">
+      <item>
+       <widget class="QLabel" name="lbDni">
+        <property name="minimumSize">
+         <size>
+          <width>104</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="text">
+            <string>Dni</string>
+        </property>
+        <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="leDni">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+<item>
+     <layout class="QHBoxLayout" name="hlDialog">
+      <item>
+       <widget class="QLabel" name="lbDireccion">
+        <property name="minimumSize">
+         <size>
+          <width>104</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="text">
+            <string>Direccion</string>
+        </property>
+        <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="leDireccion">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+<item>
+     <layout class="QHBoxLayout" name="hlDialog">
+      <item>
+       <widget class="QLabel" name="lbProvincia">
+        <property name="minimumSize">
+         <size>
+          <width>104</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="text">
+            <string>Provincia</string>
+        </property>
+        <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="leProvincia">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+<item>
+     <layout class="QHBoxLayout" name="hlDialog">
+      <item>
+       <widget class="QLabel" name="lbCiudad">
+        <property name="minimumSize">
+         <size>
+          <width>104</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="text">
+            <string>Ciudad</string>
+        </property>
+        <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="leCiudad">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+<item>
+     <layout class="QHBoxLayout" name="hlDialog">
+      <item>
+       <widget class="QLabel" name="lbEmail">
+        <property name="minimumSize">
+         <size>
+          <width>104</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="text">
+            <string>Email</string>
+        </property>
+        <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="leEmail">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+<item>
+     <layout class="QHBoxLayout" name="hlDialog">
+      <item>
+       <widget class="QLabel" name="lbTelefono">
+        <property name="minimumSize">
+         <size>
+          <width>104</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="text">
+            <string>Telefono</string>
+        </property>
+        <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="leTelefono">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+<item>
+     <layout class="QHBoxLayout" name="hlDialog">
+      <item>
+       <widget class="QLabel" name="lbObservaciones">
+        <property name="minimumSize">
+         <size>
+          <width>104</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="text">
+            <string>Observaciones</string>
+        </property>
+        <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="leObservaciones">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+<item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QPushButton" name="btExit">
+        <property name="text">
+         <string>Exit</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btSave">
+        <property name="text">
+         <string>Save</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    </layout>
+   </item>
+  </layout>
+
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>btExit</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>273</x>
+     <y>201</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>123</x>
+     <y>186</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
