@@ -56,7 +56,7 @@ class LibroDiarioGUI(BaseGUI):
         self.cbCuentas.setCurrentIndex(0)
 
         self.actualizarLabelBalance()
-        self.setWindowTitle("Libro Diario")
+        self.setWindowTitle("Movimientos")
 
     def reloadList(self):
         desde = self.deFechaMostradaDesde.date().toPyDate()

@@ -30,10 +30,10 @@ class AddMovimiento(BaseAdd):
         self.btSave.setDefault(True)
         if self.itemToEdit:
             self.btSave.setText('Editar')
-            self.setWindowTitle(u'Editar Ingreso')
+            self.setWindowTitle(u'Editar Movimiento')
             self._loadDataInWidgets()
         else:
-            self.setWindowTitle(u"Agregar Ingreso")
+            self.setWindowTitle(u"Agregar Movimiento")
         #self.lbTitle.setText(self.windowTitle())
 
         self.deFecha.setDate( datetime.today() )

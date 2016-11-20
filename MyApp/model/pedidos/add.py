@@ -62,8 +62,8 @@ class AddPedidos( BaseAdd ):
         [self.cbTela.addItem(obj.nombre) for obj in self.objs['telas']]
 
         # carga el combo de colores y los productos actuales en la ram
-        tela = str(self.cbTela.currentIndex())
-        self.objs['colores'] = sortListOfListObjs(self.managers.materiasprimas.get(u'tela'), campo='color')
+        tela = str(self.cbTela.currentText())
+        self.objs['colores'] = sortListOfListObjs(self.managers.materiasprimas.get(tela), campo='color')
 
         self.cbColor.clear()
         [self.cbColor.addItem(obj.color) for obj in self.objs['colores']]
@@ -90,7 +90,12 @@ class AddPedidos( BaseAdd ):
         for prod in self.productosEnLista:
             total += prod['subtotal']
         self.lbTotal.setText("$ %8.2f" % total)
-        return total
+        return total4
+
+    #MODULOS FALTANTES: 
+
+    ''' CALCULAR DISPONIBILIDAD DE MATERIA PRIMA, SEGUN LA CANTIDAD QUE LLEVA CADA PRODUCTO EN EL PEDIDO 
+    Y LA CANTIDAD DE PRODUCTOS PEDIDOS '''
 
     '''def calcularTiempo(self): buscar el tiempo que tarda un empleado en producir una unidad de cada 
     producto seleccionado y en base a eso calcular el tiempo

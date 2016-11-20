@@ -4,13 +4,9 @@
 import sys
 from PyQt4 import QtGui
 from gui.mainwindow import MainWindow
-from model.movimiento.libro_diario import LibroDiarioGUI
-from model.seccion.secciones_categorias_gui import SeccionesCategoriasGUI
+
 from model.seccion.gui import SeccionesGUI
 from model.cuenta.gui import CuentasGUI
-from model.pedidos.gui import PedidosGUI
-from model.cliente.gui import ClienteGUI
-
 class Views :
 
     def __init__(self, models):
@@ -60,6 +56,11 @@ class Views :
         from model.pedidos.gui import PedidosGUI
         self.pedidos_gui = PedidosGUI(self.managers.pedidos, self.managers, parent=self.window)
         return self.pedidos_gui
+
+    def instanceTurnos(self):
+        from model.turno.gui import TurnoGUI
+        self.turno_gui = TurnoGUI(self.managers.turno, self.managers, parent=self.window)
+        return self.turno_gui
 
     def instanceMovimientos(self):
         from model.movimiento.libro_diario import LibroDiarioGUI

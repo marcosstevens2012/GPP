@@ -10,7 +10,7 @@ class Productos(object):
 
     __storm_table__ = "productoss"
 
-    id = Int(primary = True)
+    ide = Int(primary = True)
     producto = Unicode(allow_none = False)
     cantidad = Int()
     rubro = Unicode()

@@ -10,7 +10,7 @@ class Pedidos(object):
 
     __storm_table__ = "pedidos"
 
-    id = Int(primary = True)
+    ide = Int(primary = True)
     fecha = Date(allow_none = False)
     cliente_id = Int()
     materiaprima_id = Int()

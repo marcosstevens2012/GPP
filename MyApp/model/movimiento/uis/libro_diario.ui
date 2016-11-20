@@ -202,7 +202,7 @@ border-bottom-right-radius: 0px ;
 }</string>
               </property>
               <property name="text">
-               <string>Libro Diario</string>
+               <string>Movimientos</string>
               </property>
              </widget>
             </item>

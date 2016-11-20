@@ -87,3 +87,8 @@ class MainWindow(QtGui.QMainWindow):
         window = self.views.instancePedidos()
         window.show()
 
+    @QtCore.pyqtSlot()
+    def on_btTurnos_clicked(self):
+        window = self.views.instanceTurnos()
+        window.show()
+

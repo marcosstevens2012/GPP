@@ -14,6 +14,7 @@ from model.proveedor.manager import ProveedorManager
 from model.movimiento.manager import MovimientosManager
 from model.cuenta.manager import CuentasManager
 from model.seccion.manager import SeccionesManager
+from model.turno.manager import TurnoManager
 
 
 
@@ -37,5 +38,6 @@ class Models:
         self.secciones = SeccionesManager(store, reset = vReset, managers = self)
         self.pedidos = PedidosManager(store, reset = vReset, managers = self)
         self.pedidoproductos = PedidoproductoManager(store, reset = vReset, managers = self)
+        self.turno = TurnoManager(store, reset = vReset, managers = self)
 
 
