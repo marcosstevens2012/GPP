@@ -63,7 +63,7 @@ class BaseGUI( QtGui.QMainWindow ):
 
         self.widgets = {
             'btNew':True, 'btEdit':True, 'btDelete':True,
-            'leSearch':True, 'cbFilters':True,
+            'leSearch':False, 'cbFilters':True,
             'twItems':True, 'lbItemsCount':True,
             'lbTitle':True
         }

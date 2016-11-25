@@ -9,4 +9,5 @@ class TurnoManager( BaseManager ):
     def __init__(self, store, reset = False, managers = None ):
         BaseManager.__init__(self, store, reset)
         self.CLASS = Turno
+        self.managers = managers
         self._start_operations()

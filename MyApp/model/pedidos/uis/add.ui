@@ -148,17 +148,40 @@
          </widget>
         </item>
         <item>
-         <widget class="QComboBox" name="cbTela"/>
-        </item>
-        <item>
-         <widget class="QLabel" name="label_8">
-          <property name="text">
-           <string>Color</string>
+         <widget class="QComboBox" name="cbTela">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QComboBox" name="cbColor"/>
+         <widget class="QLabel" name="label_8">
+          <property name="text">
+           <string>Estado</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="cbColor">
+          <item>
+           <property name="text">
+            <string>En_curso </string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Suspendido</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Finalizado </string>
+           </property>
+          </item>
+         </widget>
         </item>
         <item>
          <widget class="QPushButton" name="btQuitarProducto">

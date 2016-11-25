@@ -3,4 +3,3 @@
 from mvc import Main
 
 Main()
-

@@ -68,21 +68,26 @@ font-family: Ubuntu, Helvetica, sans-serif;
        </spacer>
       </item>
       <item>
+       <widget class="QLabel" name="lbSearch">
+        <property name="maximumSize">
+         <size>
+          <width>20</width>
+          <height>20</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>../../../iconos/lupa.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
        <layout class="QHBoxLayout" name="horizontalLayout">
-        <item>
-         <widget class="QLabel" name="lbSearch">
-          <property name="styleSheet">
-           <string notr="true">QLabel{
-color:rgb(85, 85, 85);
-font:bold;
-font-family: Ubuntu, Helvetica, sans-serif;
-}</string>
-          </property>
-          <property name="text">
-           <string>Search</string>
-          </property>
-         </widget>
-        </item>
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout_5">
           <property name="spacing">
@@ -159,6 +164,10 @@ font-family: Ubuntu, Helvetica, sans-serif;
         <property name="text">
          <string>New</string>
         </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../../../iconos/nuevo-icono-de-grupo-de-usuario-14853.2.2.png</normaloff>../../../iconos/nuevo-icono-de-grupo-de-usuario-14853.2.2.png</iconset>
+        </property>
        </widget>
       </item>
       <item>
@@ -168,6 +177,10 @@ font-family: Ubuntu, Helvetica, sans-serif;
         </property>
         <property name="text">
          <string>Edit</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../../../iconos/lapiz.png</normaloff>../../../iconos/lapiz.png</iconset>
         </property>
         <property name="flat">
          <bool>true</bool>
@@ -181,6 +194,10 @@ font-family: Ubuntu, Helvetica, sans-serif;
         </property>
         <property name="text">
          <string>Delete</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>../../../iconos/borrar.2.2.png</normaloff>../../../iconos/borrar.2.2.png</iconset>
         </property>
         <property name="flat">
          <bool>true</bool>
@@ -311,5 +328,6 @@ font: 10px;
    </layout>
   </widget>
  </widget>
+ <resources/>
  <connections/>
 </ui>

@@ -6,46 +6,20 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>480</height>
+    <width>427</width>
+    <height>413</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_2">
-   <item>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../iconos/03-icono-empleados.png</normaloff>../../iconos/03-icono-empleados.png</iconset>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
     <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
-      <layout class="QHBoxLayout" name="hlDialog">
-       <item>
-        <widget class="QLabel" name="lbEmpleado ">
-         <property name="minimumSize">
-          <size>
-           <width>104</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="text">
-          <string>Empleado </string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QComboBox" name="cbEmpleado ">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
      <item>
       <layout class="QHBoxLayout" name="hlDialog">
        <item>
@@ -56,6 +30,12 @@
            <height>0</height>
           </size>
          </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI Light</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>Fecha </string>
          </property>
@@ -65,7 +45,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QDateEdit" name="deFecha ">
+        <widget class="QDateEdit" name="deFecha">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -85,12 +65,54 @@
      <item>
       <layout class="QHBoxLayout" name="hlDialog">
        <item>
+        <widget class="QLabel" name="lbEmpleado ">
+         <property name="minimumSize">
+          <size>
+           <width>104</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI Light</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Empleado </string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="cbEmpleado">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="hlDialog">
+       <item>
         <widget class="QLabel" name="lbHora_entrada_">
          <property name="minimumSize">
           <size>
            <width>104</width>
            <height>0</height>
           </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI Light</family>
+           <pointsize>10</pointsize>
+          </font>
          </property>
          <property name="text">
           <string>Hora_Entrada_</string>
@@ -101,7 +123,18 @@
         </widget>
        </item>
        <item>
-        <widget class="QTimeEdit" name="timeEdit"/>
+        <widget class="QTimeEdit" name="teEntrada">
+         <property name="time">
+          <time>
+           <hour>8</hour>
+           <minute>0</minute>
+           <second>0</second>
+          </time>
+         </property>
+         <property name="displayFormat">
+          <string>H:mm</string>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>
@@ -115,6 +148,12 @@
            <height>0</height>
           </size>
          </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI Light</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>Hora_Salida</string>
          </property>
@@ -124,7 +163,21 @@
         </widget>
        </item>
        <item>
-        <widget class="QTimeEdit" name="timeEdit_2"/>
+        <widget class="QTimeEdit" name="teSalida">
+         <property name="time">
+          <time>
+           <hour>12</hour>
+           <minute>0</minute>
+           <second>0</second>
+          </time>
+         </property>
+         <property name="displayFormat">
+          <string>H:mm</string>
+         </property>
+         <property name="calendarPopup">
+          <bool>false</bool>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>
@@ -138,6 +191,12 @@
            <height>0</height>
           </size>
          </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI Light</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>Horas </string>
          </property>
@@ -147,7 +206,14 @@
         </widget>
        </item>
        <item>
-        <widget class="QSpinBox" name="sbHoras "/>
+        <widget class="QSpinBox" name="sbHoras">
+         <property name="wrapping">
+          <bool>false</bool>
+         </property>
+         <property name="value">
+          <number>4</number>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>
@@ -161,6 +227,12 @@
            <height>0</height>
           </size>
          </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI Light</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>Producto </string>
          </property>
@@ -170,7 +242,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QComboBox" name="cbProducto ">
+        <widget class="QComboBox" name="cbProductos">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -191,6 +263,12 @@
            <height>0</height>
           </size>
          </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI Light</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>Cantidad </string>
          </property>
@@ -200,7 +278,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QSpinBox" name="sbCantidad "/>
+        <widget class="QSpinBox" name="sbCantidad"/>
        </item>
       </layout>
      </item>
@@ -214,6 +292,12 @@
            <height>0</height>
           </size>
          </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI Light</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>Pedido </string>
          </property>
@@ -223,7 +307,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QComboBox" name="cbPedido ">
+        <widget class="QComboBox" name="cbPedidos">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -238,6 +322,12 @@
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
         <widget class="QPushButton" name="btExit">
+         <property name="font">
+          <font>
+           <family>Segoe UI Light</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>Salir</string>
          </property>
@@ -258,6 +348,12 @@
        </item>
        <item>
         <widget class="QPushButton" name="btSave">
+         <property name="font">
+          <font>
+           <family>Segoe UI Light</family>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>Aceptar</string>
          </property>

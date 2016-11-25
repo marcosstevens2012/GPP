@@ -13,7 +13,6 @@ class MainWindow(QtGui.QMainWindow):
         FILENAME = 'mainwindow.ui'
         QtGui.QMainWindow.__init__(self)
         uifile = os.path.join(os.path.abspath(os.path.dirname(__file__)),FILENAME)
-        ICONFILE = join(abspath(dirname(__file__)),'images_rc/logo.png')
         uic.loadUi(uifile, self)
         self.__centerOnScreen()
         self.setWindowTitle("Gestor de movimientos")
@@ -21,9 +20,6 @@ class MainWindow(QtGui.QMainWindow):
 
         self.managers = managers
 
-    def __centerOnScreen (self):
-        resolution = QtGui.QDesktopWidget().screenGeometry()
-        self.move((resolution.width() / 2) - (self.frameSize().width() / 2),
-                  (resolution.height() / 2) - (self.frameSize().height() / 2))
+    
 
    

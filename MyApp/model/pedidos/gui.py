@@ -24,5 +24,7 @@ class PedidosGUI( BaseGUI ):
         self.addTableColumn(u'Estado', Pedidos.estado)
         self.addTableColumn(u'Fecha fin', Pedidos.fechafin)
 
+        
+
         self.pluralTitle = 'Pedidos'
         self._start_operations()

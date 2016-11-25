@@ -18,6 +18,7 @@ class AddPedidos( BaseAdd ):
 
         self.linkToAttribute(self.deFecha, Pedidos.fecha)
         self.linkToAttribute(self.cbClientes, Pedidos.cliente)
+    
 
         self.singleTitle = 'pedido'
         self._start_operations()
@@ -38,7 +39,7 @@ class AddPedidos( BaseAdd ):
                 self.productosEnLista.append({
                     'cantidad':obj.cantidad,
                     'tela': obj.tela,
-                    'color':obj.color,
+                    'talle':obj.talle,
                     'producto':obj.producto,
                     'subtotal':obj.precio
                 })
@@ -57,28 +58,29 @@ class AddPedidos( BaseAdd ):
         # carga el combo de telas y los productos actuales en la ram
         self.objs['telas'] = sortListOfListObjs(
             self.managers.materiasprimas.get(u'tela'), campo='nombre')
+            #self.managers.materiasprimas.getall(), campo='nombre')
 
         self.cbTela.clear()
         [self.cbTela.addItem(obj.nombre) for obj in self.objs['telas']]
 
         # carga el combo de colores y los productos actuales en la ram
-        tela = str(self.cbTela.currentText())
-        self.objs['colores'] = sortListOfListObjs(self.managers.materiasprimas.get(tela), campo='color')
+        
+        #tela = self.cbTela.currentText
+        #self.objs['colores'] = sortListOfListObjs(self.managers.materiasprimas.get(tela), campo='color')
 
-        self.cbColor.clear()
-        [self.cbColor.addItem(obj.color) for obj in self.objs['colores']]
+        #self.cbColor.clear()
+        #[self.cbColor.addItem(obj.color) for obj in self.objs['colores']]
 
     def reloadTableProductos(self):
-        cols = [u'Cantidad', u'Producto', u'tela', u'talle', u'color', u'Costo', u'Subtotal']
-        self.otwProductos = MyTableWidget(self.twProductos, cols, ['C','L', 'L', 'L', 'L', 'C', 'C'])
+        cols = [u'Cantidad', u'Producto', u'tela', u'talle', u'Costo', u'Subtotal']
+        self.otwProductos = MyTableWidget(self.twProductos, cols, ['C','L', 'L', 'L', 'C', 'C'])
         self.otwProductos.fullClear()
         for prod in self.productosEnLista:
             item = [
                 prod['cantidad'],
                 prod['producto'].producto,
-                prod['tela'],
+                prod['tela'].nombre,
                 prod['talle'],
-                prod['color'],
                 "$ %8.2f" % prod['producto'].costo,
                 "$ %8.2f" % prod['subtotal'],
             ]
@@ -90,7 +92,7 @@ class AddPedidos( BaseAdd ):
         for prod in self.productosEnLista:
             total += prod['subtotal']
         self.lbTotal.setText("$ %8.2f" % total)
-        return total4
+        return total
 
     #MODULOS FALTANTES: 
 
@@ -131,8 +133,8 @@ class AddPedidos( BaseAdd ):
                 'pedido':pedido,
                 'producto':item['producto'],
                 'cantidad':item['cantidad'],
+                'talle':item['talle'],
                 'tela':item['tela'],
-                'color':item['color'],
                 'precio':item['producto'].costo,
                 }
                 obj = self.manager.store.add(Pedidoproducto(**data))
@@ -152,6 +154,7 @@ class AddPedidos( BaseAdd ):
             return
 
         producto = self.objs['productos'][self.cbProductos.currentIndex()]
+        tela = self.objs['telas'][self.cbTela.currentIndex()]
         # valida que el producto no se encuentre en la lista
         if producto in [p['producto'] for p in self.productosEnLista]:
             return
@@ -160,7 +163,7 @@ class AddPedidos( BaseAdd ):
             'cantidad':self.sbCantidad.value(),
             'talle':self.sbTalle.value(),
             'color':self.cbColor.currentText(), 
-            'tela':self.cbTela.currentText(), 
+            'tela':tela, 
             'producto':producto,
             'subtotal':self.sbCantidad.value() * producto.costo
         }

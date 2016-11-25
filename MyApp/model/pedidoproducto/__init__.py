@@ -4,7 +4,7 @@
 from storm.locals import *
 from model.pedidos import Pedidos
 from model.productos import Productos
-
+from model.materiaprima import Materiaprima
 
 class Pedidoproducto(object):
 
@@ -16,18 +16,17 @@ class Pedidoproducto(object):
     producto_id = Int()
     producto = Reference(producto_id, Productos.ide)
     cantidad = Int()
-    tela = Unicode()
+    materiaprima_id = Int()
+    tela = Reference(materiaprima_id, Materiaprima.ide)
     talle = Int()
-    color = Unicode()
     precio = Float()
 
 
-    def __init__(self, pedido, producto, cantidad, talle, color, tela, precio):
+    def __init__(self, pedido, producto, cantidad, talle, tela, precio):
         self.pedido = pedido
         self.producto = producto
         self.cantidad = cantidad
         self.talle = talle 
-        self.color = color
         self.tela = tela 
         self.precio = precio
 

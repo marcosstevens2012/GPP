@@ -15,18 +15,14 @@ class Pedidos(object):
     cliente_id = Int()
     materiaprima_id = Int()
     cliente = Reference(cliente_id, Cliente.ide)
-    talle = Int()
-    tela = Reference(materiaprima_id, Materiaprima.categoria)
     costo = Float()
     estado = Unicode(allow_none = False)
     fechafin = Date()
 
 
-    def __init__(self, fecha, cliente, talle, tela, costo, estado=None, fechafin=None):
+    def __init__(self, fecha, cliente, costo, estado=None, fechafin=None):
         self.fecha = fecha
-        self.cliente = cliente
-        self.talle = talle
-        tela.tela = tela 
+        self.cliente = cliente 
         self.costo = costo
         self.estado = estado
         self.fechafin = fechafin
