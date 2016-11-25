@@ -75,4 +75,4 @@ class AddTurno( BaseAdd ):
         self.cbPedidos.clear()
         [self.cbPedidos.addItem(str((int(obj.ide)))) for obj in self.objs['pedidos']]
     
-
+  
